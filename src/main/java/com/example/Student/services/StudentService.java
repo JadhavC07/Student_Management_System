@@ -36,7 +36,7 @@ public class StudentService {
     }
 
     private String uploadFile(File file, String fileName) throws IOException {
-        BlobId blobId = BlobId.of("baucketname-can-find-in-google-firebase-storage", fileName);
+        BlobId blobId = BlobId.of("bucketname-can-find-in-google-firebase-storage", fileName);
         BlobInfo blobInfo = BlobInfo.newBuilder(blobId).setContentType("media").build();
         InputStream inputStream = StudentService.class.getClassLoader().getResourceAsStream("firebase-private-key.json"); // change the file name with your one
         GoogleCredentials credentials = GoogleCredentials.fromStream(inputStream);
